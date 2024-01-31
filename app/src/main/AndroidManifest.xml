@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+    <uses-feature
+        android:name="android.software.leanback"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Securinzy"
+        tools:targetApi="31">
+
+        <!-- Your existing activities -->
+
+        <activity
+            android:name=".Splash_screen"
+            android:exported="false" />
+        <activity
+            android:name=".booking"
+            android:exported="true"
+            android:label="@string/title_activity_booking"
+            android:theme="@style/Theme.Securinzy" />
+        <activity
+            android:name=".softwareTesting"
+            android:exported="true"
+            android:label="@string/title_activity_software_testing"
+            android:theme="@style/Theme.Securinzy" />
+        <activity
+            android:name=".SERVICES"
+            android:exported="false" />
+        <activity
+            android:name=".network"
+            android:exported="true"
+            android:parentActivityName=".SERVICES" />
+        <activity
+            android:name=".pentestActivity"
+            android:exported="true"
+            android:parentActivityName=".SERVICES" />
+        <activity
+            android:name=".services"
+            android:exported="false" />
+        <activity
+            android:name=".signup"
+            android:exported="false"
+            android:label="@string/title_activity_signup"
+            android:theme="@style/Theme.Securinzy" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Securinzy">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- BroadcastReceiver -->
+        <receiver
+            android:name=".MyReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <!-- Add other actions you want to handle -->
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>
