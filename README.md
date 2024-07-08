@@ -1,1 +1,1 @@
-this is our frirst andriod application it is mini cybersecurity organization it can offer you some services related to cyber security as  # Securinzy-Booking-App
+this is our frirst andriod application it is mini cybersecurity organization it can offer you some services related to cybersecurity as penetration test , software testing , secure your network ,defending techniques ,booking cs specialist as instructor , awaring sessions for your employees. # Securinzy-Booking-App
